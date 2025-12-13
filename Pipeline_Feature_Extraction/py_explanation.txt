@@ -1,0 +1,46 @@
+Penjelasan File Python dalam Pipeline Ekstraksi Fitur
+
+1. pipeline_features.py
+   - Script utama untuk ekstraksi fitur audio dari video.
+   - Mengambil video dari folder data/raw_videos/
+   - Mengekstrak audio menggunakan ffmpeg dan fitur audio menggunakan librosa
+   - Menyimpan fitur audio ke folder data/audio_outputs/
+
+2. analyze_audio.py
+   - Melakukan transkripsi audio (.wav) menggunakan model Whisper.
+   - Menghasilkan file transcripts.csv di data/processed/
+   - Menggunakan model medium, fallback ke small jika memory penuh.
+
+3. analyze_stt.py
+   - Melakukan ekstraksi fitur visual dari video menggunakan MediaPipe Face Mesh.
+   - Menghitung fitur seperti eye aspect ratio, head movement, blink, dan gaze direction.
+   - Menyimpan hasil ke data/visual_features.csv
+
+4. analyze_visual.py
+   - Mengolah data visual_features.csv menjadi data yang sudah di-aggregate.
+   - Menghitung statistik summary dan proporsi gaze per video.
+   - Output di data/visual_features_aggregated.csv
+
+5. aggregate_visual.py
+   - Menggabungkan fitur audio dan visual yang sudah diproses.
+   - Membaca audio_features.csv dan visual_features_aggregated.csv
+   - Menghasilkan gabungan fitur audio-visual di data/audio_visual_features_final.csv
+
+6. merge_audio_visual.py
+   - Menggabungkan fitur audio dan fitur visual yang sudah diproses.
+   - Membaca audio_features.csv dan visual_features_aggregated.csv.
+   - Output hasil gabungan fitur audio-visual di data/audio_visual_features_final.csv.
+
+7. merge_with_labels.py
+   - (Opsional, untuk training)
+   - Menggabungkan fitur audio-visual dengan label dari dataset_master/labels.csv.
+   - Output dataset lengkap di data/dataset_features_labels.csv.
+
+---
+
+Catatan:
+- Semua path file dan folder diatur relatif terhadap lokasi script.
+- Pastikan dependencies terinstall sesuai requirements.txt
+- Jalankan pipeline_features.py untuk mulai ekstraksi fitur audio.
+- Jalankan script preprocessing lain secara berurutan sesuai kebutuhan.
+- Dataset hasil akhir ada di folder data/processed/ atau data/audio_outputs/ tergantung step.
