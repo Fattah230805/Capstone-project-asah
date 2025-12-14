@@ -26,7 +26,7 @@ Pipeline_Feature_Extraction/
 │
 ├─ pipeline_features.py            # Entry point pipeline
 └─ requirements.txt                # Daftar dependensi Python
-
+```
 ## Cara Menjalankan Pipeline Ekstraksi Fitur
 
 ### 1. Persyaratan Environment (Wajib)
