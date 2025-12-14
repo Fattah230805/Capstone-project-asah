@@ -1,10 +1,8 @@
 Penjelasan File Python dalam Pipeline Ekstraksi Fitur
 
 1. pipeline_features.py
-   - Script utama untuk ekstraksi fitur audio dari video.
+   - Script utama untuk pipeline ekstraksi fitur dari video.
    - Mengambil video dari folder data/raw_videos/
-   - Mengekstrak audio menggunakan ffmpeg dan fitur audio menggunakan librosa
-   - Menyimpan fitur audio ke folder data/audio_outputs/
 
 2. analyze_audio.py
    - Melakukan transkripsi audio (.wav) menggunakan model Whisper.
@@ -41,6 +39,6 @@ Penjelasan File Python dalam Pipeline Ekstraksi Fitur
 Catatan:
 - Semua path file dan folder diatur relatif terhadap lokasi script.
 - Pastikan dependencies terinstall sesuai requirements.txt
-- Jalankan pipeline_features.py untuk mulai ekstraksi fitur audio.
+- Jalankan pipeline_features.py untuk mulai ekstraksi fitur video untuk menghasilkan final dataset.
 - Jalankan script preprocessing lain secara berurutan sesuai kebutuhan.
 - Dataset hasil akhir ada di folder data/processed/ atau data/audio_outputs/ tergantung step.
