@@ -45,7 +45,7 @@ Pipeline ini **dikembangkan dan diuji menggunakan environment berikut**:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ### 3. Menjalankan Pipeline
 Jalankan perintah berikut dari folder Pipeline_Feature_Extraction:
 python pipeline_features.py
