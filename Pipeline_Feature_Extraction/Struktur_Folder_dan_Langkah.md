@@ -46,10 +46,14 @@ Pipeline ini **dikembangkan dan diuji menggunakan environment berikut**:
 ```bash
 pip install -r requirements.txt
 ```
+
 ### 3. Menjalankan Pipeline
 Jalankan perintah berikut dari folder Pipeline_Feature_Extraction:
+```bash
 python pipeline_features.py
+```
 
 ### 4. Output
 Pipeline akan memproses video di data/raw_videos/, ekstrak fitur, lalu simpan dataset final di data/processed/.
+
 Dataset hasil ekstraksi siap digunakan untuk modelling atau testing selanjutnya.
