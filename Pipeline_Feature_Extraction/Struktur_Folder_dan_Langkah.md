@@ -5,7 +5,7 @@
 ⚠️ **Struktur folder HARUS sesuai** agar pipeline dapat berjalan dengan benar.  
 Seluruh file `.py` **wajib diunduh** dan diletakkan sesuai struktur berikut:
 
-```text
+
 Pipeline_Feature_Extraction/
 │
 ├─ data/
