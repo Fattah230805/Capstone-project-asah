@@ -44,6 +44,8 @@ Sistem ini **sangat sensitif** terhadap nama kolom di file CSV. Pastikan file CS
   * `head_movement_mean`, `head_movement_min`, `head_movement_max`: Pergerakan kepala.
   * `gaze_left_prop`, `gaze_right_prop`: Proporsi arah pandangan mata.
 
+File CSV didapatkan dari hasil ektrak fitur dari video yang ada di Pipeline_Feature_Extraction
+
 -----
 
 ## 3\. Cara Menjalankan Pipeline
